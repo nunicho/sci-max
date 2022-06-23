@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=" author" content="María Florencia Alonso - Matías Ahumada - Tomás Budeguer - Mauricio Javier Alonso - Andrea Luciana Rojas" />
+  <meta name="description" content="Servicio de Streaming SCI-MAX - Trabajo Práctico Fin de Unidad 1" />
+  <meta name=" keywords" content="peliculas, ciencia, ficcion, series, novedades, estrenos" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../img/logo/favicon.ico" />
+  <title>SCI-MAX</title>
+</head>
+
+<body>
+  <header>
+    <section>
+      <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img class="logoNavbar" src="../img/logo/logo-ae04ff.png" alt="logo" width="67" height="67" />
+          </a>
+          <button class="navbar-toggler btnColorPrincipal" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0 mt-2">
+              <li class="nav-item">
+                <button class="btn btnColorPrincipal text-white p-2 mx-2 mb-2" type="button" data-bs-toggle="modal"
+                  data-bs-target="#modalLogin">
+                  Iniciar Sesion
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btnColorPrincipal py-0 mx-2 mb-2">
+                  <a class="nav-link text-white" href="suscripcion.html">Suscribite</a>
+                </button>
+              </li>
+              <li class="nav-item dropdown mx-2 mb-2">
+                <a class="nav-link btn btnColorPrincipal dropdown-toggle text-white" href="#" id="navbarDropdown"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu bgplan" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="categoriaSpaceOpera.html">Space Opera</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal active" href="categoriaAlienMonster.html">Aliens y
+                      Monstruos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="categoriaRobots.html">Robots</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="categoriaDistopia.html">Distopías</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="categoriaTiempo.html">Viajes en el tiempo</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="categoriaExclusivo.html">Exclusivo
+                      <span class="badge text-bg-danger fs-6">Nueva</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mx-2">
+              <input class="form-control" type="text" maxlength="25" minlength="1" placeholder="Ej: Predator"
+                aria-label="Search" />
+              <button class="btn btnColorPrincipal text-white" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- ventana modal login -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bgGradiente">
+          <div class="modal-header flex-column-reverse">
+            <h2 class="modal-title text-white fontCabin" id="modalLoginLabel">
+              Iniciar Sesion
+            </h2>
+            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <article>
+              <form class="mb-3">
+                <div class="mb-3">
+                  <label for="email" class="form-label text-white fontCabin">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" id="email" placeholder="juanperez@email.com" maxlength="100" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label text-white fontCabin">Contraseña</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-key"></i></span>
+                    <input type="password" id="contraseña" placeholder="************" maxlength="20" minlength="7"
+                      required class="form-control" />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <aside>
+                    <a href="pages/error404.html" class="text-dark"><button class="btn bg-white fontCabin">
+                        Iniciar Sesion
+                      </button></a>
+                  </aside>
+                </div>
+              </form>
+              <div class="d-flex justify-content-center">
+                <a href="pages/error404.html" class="fontCabin">¿Olvidaste tu contraseña?</a>
+              </div>
+              <hr class="text-white" />
+              <p class="text-center text-white fst-italic">
+                Si aun no tienes una cuenta, podes crear tu cuenta aca abajo
+                de <b> forma gratuita </b>
+              </p>
+              <hr class="text-white" />
+            </article>
+            <article>
+              <h2 class="text-white text-center">Crear Cuenta</h2>
+              <form>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label text-white fontCabin">
+                    Nombre</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                    <input type="text" id="nombre" placeholder="Ej: Juan" maxlength="20" minlength="2" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="apellido" class="form-label text-white fontCabin">
+                    Apellido</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                    <input type="text" id="apellido" placeholder="Ej: Rodriguez" maxlength="20" minlength="2" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label text-white fontCabin">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" id="email" placeholder="juanperez@email.com" maxlength="100" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label text-white fontCabin">Contraseña</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-key"></i></span>
+                    <input type="password" id="contraseña" placeholder="************" maxlength="20" minlength="7"
+                      required class="form-control" />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <aside>
+                    <a href="pages/error404.html" class="text-dark"><button class="btn bg-white fontCabin">
+                        Suscribete
+                      </button></a>
+                  </aside>
+                </div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="mt-5">
+      <img src="../img/error.jpg" alt="error404" class="w-100 mt-4  imgError404">
+    </section>
+    <section class="text-center bg-black">
+      <a button type="button" class="btn  btnColorPrincipal" href="../index.html" class="text-white">Volver al inicio</a>
+    </section>
+  </main>
+  <footer class="bg-color py-5 text-center">
+    <section class="m-ms container">
+      <article class="row">
+        <div class="col-12 col-md-3 col-lg-2">
+          <a href="../index.html">
+            <img class="logoFooter" src="../img/logo/logo-ae04ff.png" alt="logo" width="67" height="67" />
+          </a>
+        </div>
+        <div class="sm-app2 col-12 col-md-3 col-lg-2">
+          <a href="../pages/contacto.html" class="linkFooter fs-5">Contáctanos</a>
+        </div>
+        <div class="sm-app col-12 col-md-4 col-lg-2">
+          <a href="../pages/acercaDeNosotros.html" class="linkFooter fs-5">Acerca de nosotros</a>
+        </div>
+        <div class="col-md-7 col-12 mt-md col-lg-3">
+          <div class="d-flex flex-column">
+            <h5 class="text-center text-white fs-5 mb-3">Nuestra App</h5>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6 linkFooterApp">
+                <a href="../pages/error404.html">
+                  <img src="../img/badge-apple-store.svg" alt="iphone" width="150px" />
+                </a>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 sm-app linkFooterApp">
+                <a href="../pages/error404.html">
+                  <img src="../img/google-play-badge-bb.svg" alt="Play store" width="150px" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mt-md col-lg-2">
+          <div class="text-center sm-app">
+            <h5 class="text-white fs-5">Seguinos</h5>
+            <a href="../pages/error404.html"><i class="bi bi-facebook fs-4 ms-3 linkFooter"></i></a>
+            <a href="../pages/error404.html"><i class="bi bi-instagram fs-4 ms-3 linkFooter"></i></a>
+            <a href="../pages/error404.html"><i class="bi bi-twitter fs-4 ms-3 linkFooter"></i></a>
+          </div>
+        </div>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fb30d5e621.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

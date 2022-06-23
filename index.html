@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=" author" content="María Florencia Alonso - Matías Ahumada - Tomás Budeguer - Mauricio Javier Alonso - Andrea Luciana Rojas" />
+  <meta name="description" content="Servicio de Streaming SCI-MAX - Trabajo Práctico Fin de Unidad 1" />
+  <meta name=" keywords" content="peliculas, ciencia, ficcion, series, novedades, estrenos" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logo/favicon.ico" />
+  <title>SCI-MAX</title>
+</head>
+
+<body>
+  <!------------------------------------------------ HEADER---------------------------------------->
+  <header>
+    <section>
+      <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img class="logoNavbar" src="img/logo/logo-ae04ff.png" alt="logo" width="67" height="67" />
+          </a>
+          <button class="navbar-toggler btnColorPrincipal" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0 mt-2">
+              <li class="nav-item">
+                <button class="btn btnColorPrincipal text-white p-2 mx-2 mb-2" type="button" data-bs-toggle="modal"
+                  data-bs-target="#modalLogin">
+                  Iniciar Sesion
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btnColorPrincipal py-0 mx-2 mb-2">
+                  <a class="nav-link text-white" href="pages/suscripcion.html">Suscribite</a>
+                </button>
+              </li>
+              <li class="nav-item dropdown mx-2 mb-2">
+                <a class="nav-link btn btnColorPrincipal dropdown-toggle text-white" href="#" id="navbarDropdown"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu bgplan" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="pages/categoriaSpaceOpera.html">Space Opera</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="pages/categoriaAlienMonster.html">Aliens y
+                      Monstruos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="pages/categoriaRobots.html">Robots</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="pages/categoriaDistopia.html">Distopías</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="pages/categoriaTiempo.html">Viajes en el tiempo</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item btnColorPrincipal" href="pages/categoriaExclusivo.html">Exclusivo
+                      <span class="badge text-bg-danger">Nueva</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mx-2">
+              <input class="form-control" type="text" maxlength="25" minlength="1" placeholder="Ej: Predator"
+                aria-label="Search" />
+              <button class="btn btnColorPrincipal text-white" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- ventana modal login -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bgGradiente">
+          <div class="modal-header flex-column-reverse">
+            <h2 class="modal-title text-white fontCabin" id="modalLoginLabel">
+              Iniciar Sesion
+            </h2>
+            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <article>
+              <form class="mb-3">
+                <div class="mb-3">
+                  <label for="email" class="form-label text-white fontCabin">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" id="email" placeholder="juanperez@email.com" maxlength="100" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label text-white fontCabin">Contraseña</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-key"></i></span>
+                    <input type="password" id="contraseña" placeholder="************" maxlength="20" minlength="7"
+                      required class="form-control" />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <aside>
+                    <a href="pages/error404.html" class="text-dark"><button class="btn bg-white fontCabin">
+                        Iniciar Sesion
+                      </button></a>
+                  </aside>
+                </div>
+              </form>
+              <div class="d-flex justify-content-center">
+                <a href="pages/error404.html" class="fontCabin">¿Olvidaste tu contraseña?</a>
+              </div>
+              <hr class="text-white" />
+              <p class="text-center text-white fst-italic">
+                Si aun no tienes una cuenta, podes crear tu cuenta aca abajo
+                de <b> forma gratuita </b>
+              </p>
+              <hr class="text-white" />
+            </article>
+            <article>
+              <h2 class="text-white text-center">Crear Cuenta</h2>
+              <form>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label text-white fontCabin">
+                    Nombre</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                    <input type="text" id="nombre" placeholder="Ej: Juan" maxlength="20" minlength="2" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="apellido" class="form-label text-white fontCabin">
+                    Apellido</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                    <input type="text" id="apellido" placeholder="Ej: Rodriguez" maxlength="20" minlength="2" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label text-white fontCabin">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" id="email" placeholder="juanperez@email.com" maxlength="100" required
+                      class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label text-white fontCabin">Contraseña</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-key"></i></span>
+                    <input type="password" id="contraseña" placeholder="************" maxlength="20" minlength="7"
+                      required class="form-control" />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <aside>
+                    <a href="pages/error404.html" class="text-dark"><button class="btn bg-white fontCabin">
+                        Suscribete
+                      </button></a>
+                  </aside>
+                </div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="bgGradiente">
+    <!------------------------------------------------SECCIÓN VIDEO INTRODUCCIÓN-------------------- -->
+    <section class="container-fluid">
+      <div class="card text-white border-0">
+        <video class="videoBannerAnimado" autoplay muted loop>
+          <source src="vid/videoportada.mp4" type="video/mp4" alt="videointroduccion" />
+        </video>
+        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+          <div>
+            <div class="text-center bgHBO rounded mb-1 d-flex justify-content-evenly p-1">
+              <img src="img/fox.png" height="42" width="42" alt="Fox" />
+              <img src="img/paramount.png" height="42" width="42" alt="Paramount" />
+              <img src="img/universal.png" height="42" width="42" alt="Universal" />
+              <img src="img/warner.png" height="42" width="42" alt="Warner" />
+            </div>
+            <h5 class="card-title text-center m-1 m-sm-3 m-lg-4 font-weight-bold fs-1 fontCabin">
+              DISFRUTA SCI-MAX
+            </h5>
+            <div class="border border-2 rounded text-center">
+              <h5 class="card-text font-weight-bold bgHBO m-0 bg-opacity-75 fs-3 fontCabin">
+                PLAN DE
+              </h5>
+              <h3 class="card-text font-weight-bold bg-white m-0 bg-opacity-75 fs-1 textBannerPublicidad fontCabin">
+                3 MESES
+              </h3>
+              <h5 class="card-text font-weight-bold bgHBO m-0 bg-opacity-75 fs-3 fontCabin">
+                POR EL PRECIO DE 1
+              </h5>
+            </div>
+            <div class="text-center m-1 m-sm-3 m-lg-4 text-center p-2">
+              <a href="pages/suscripcion.html">
+                <button type="button" class="btn bgHBO text-white fs-3 fontCabin">
+                  APROVECHA AHORA
+                </button>
+              </a>
+              <p class="ofertaLetraChica mb-0 mt-1">
+                *Oferta válida para suscriptores nuevos y anteriores.
+              </p>
+              <p class="ofertaLetraChica m-0">
+                hasta el 29 de junio, 2022, por los tres primeros meses.
+              </p>
+              <p class="ofertaLetraChica text-info">
+                Sujeto a términos y condiciones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------ SECCIÓN ESTRENOS---------------------------------- -->
+    <section class="py-4">
+      <article class="container">
+        <h5 class="display-4 text-white text-center mb-5 textCursivo fontCabin">
+          Estrenos que se convertirán en nuevos favoritos.
+        </h5>
+        <div id="carouselEstrenosControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <aside class="col-12">
+                  <div class="row">
+                    <aside class="col-sm-12 col-md-6">
+                      <div class="row text-white">
+                        <aside class="col-12 mb-2">
+                          <h5 class="fontCabin display-5 text-center">
+                            JURASSIC WORLD: DOMINION
+                          </h5>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <span class="badge text-bg-success fs-6">DISPONIBLE AHORA</span>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <p>
+                            Años después de la destrucción de Isla Nublar, los
+                            dinosaurios viven y cazan junto a los humanos.
+                            Este equilibrio se verá en peligro.
+                          </p>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <div class="row">
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/pratt.jpg" class="card-img-top rounded-circle" alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">CHRIS PRATT</h5>
+                                  <p class="card-text">Es Owen <br> Grady</p>
+                                </div>
+                              </div>
+                            </aside>
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/dern.jpg" class="card-img-top rounded-circle" alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">LAURA DERN</h5>
+                                  <p class="card-text">Es Ellie Sattler</p>
+                                </div>
+                              </div>
+                            </aside>
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/dallas.jpg" class="card-img-top rounded-circle"
+                                  alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">BRYCE HOWARD</h5>
+                                  <p class="card-text">Es Claire Dearing</p>
+                                </div>
+                              </div>
+                            </aside>
+                          </div>
+                        </aside>
+                      </div>
+                    </aside>
+                    <aside class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+                      <a href="pages/jurassicWorld.html">
+                        <img src="img/proximamente/jurasic.jpg" class="w-100 rounded-3" alt="estreno 1" />
+                      </a>
+                    </aside>
+                    <a href="pages/jurassicWorld.html" class="text-center mt-4">
+                      <button class="btn btnColorPrincipal">
+                        <i class="bi bi-info-circle fs-5"></i>
+                        Mas Informacion
+                      </button>
+                    </a>
+                  </div>
+                </aside>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <aside class="col-12">
+                  <div class="row">
+                    <aside class="col-sm-12 col-md-6">
+                      <div class="row text-white">
+                        <aside class="col-12 mb-2">
+                          <h5 class="fontCabin display-5 text-center">
+                            THE ADAM <br />
+                            PROJECT
+                          </h5>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <span class="badge text-bg-success fs-6">DISPONIBLE AHORA</span>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <p>
+                            Tras un aterrizaje forzoso en 2022, un piloto de
+                            caza que viaja en el tiempo, Adam Reed, se une a
+                            su yo de 12 años en una misión para salvar el
+                            futuro.
+                          </p>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <div class="row">
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/reynolds.jpg" class="card-img-top rounded-circle"
+                                  alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">RYAN <br> REYNOLDS</h5>
+                                  <p class="card-text">es Big Adam</p>
+                                </div>
+                              </div>
+                            </aside>
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/scobell.jpg" class="card-img-top rounded-circle"
+                                  alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">WALKER SCOBELL</h5>
+                                  <p class="card-text">es Young Adam</p>
+                                </div>
+                              </div>
+                            </aside>
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/ruffalo.jpg" class="card-img-top rounded-circle"
+                                  alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">MARK RUFFALO</h5>
+                                  <p class="card-text">es Louis Reed</p>
+                                </div>
+                              </div>
+                            </aside>
+                          </div>
+                        </aside>
+                      </div>
+                    </aside>
+                    <aside class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+                      <a href="pages/theAdamProject.html">
+                        <img src="img/proximamente/adam.jpg" class="w-100 rounded-3" alt="estreno 2" />
+                      </a>
+                    </aside>
+                    <a href="pages/theAdamProject.html" class="text-center mt-4">
+                      <button class="btn btnColorPrincipal">
+                        <i class="bi bi-info-circle fs-5"></i>
+                        Mas Informacion
+                      </button>
+                    </a>
+                  </div>
+                </aside>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <aside class="col-12">
+                  <div class="row">
+                    <aside class="col-sm-12 col-md-6">
+                      <div class="row text-white">
+                        <aside class="col-12 mb-2">
+                          <h5 class="fontCabin display-5 text-center">
+                            BLACK <br />
+                            ADAM
+                          </h5>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <span class="badge text-bg-success fs-6">DISPONIBLE AHORA</span>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <p>
+                            Casi 5.000 años después de haber sido dotado de
+                            poderes y encarcelado por los antiguos dioses,
+                            Black Adam es liberado de su tumba, listo para
+                            desatar su justicia.
+                          </p>
+                        </aside>
+                        <aside class="col-12 mb-2">
+                          <div class="row">
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/dwaine.jpg" class="card-img-top rounded-circle"
+                                  alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">DWAYNE JOHNSON</h5>
+                                  <p class="card-text">es Black Adam</p>
+                                </div>
+                              </div>
+                            </aside>
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/shahi.jpg" class="card-img-top rounded-circle" alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">SARAH SHAHI</h5>
+                                  <p class="card-text">es Adrianna Tomaz</p>
+                                </div>
+                              </div>
+                            </aside>
+                            <aside class="col-4">
+                              <div class="text-center">
+                                <img src="img/proximamente/brosnan.jpg" class="card-img-top rounded-circle"
+                                  alt="actor" />
+                                <div class="card-body">
+                                  <h5 class="card-title">PIERCE BROSNAN</h5>
+                                  <p class="card-text">es Dr. <br> Fate</p>
+                                </div>
+                              </div>
+                            </aside>
+                          </div>
+                        </aside>
+                      </div>
+                    </aside>
+                    <aside class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+                      <a href="pages/blackAdam.html">
+                        <img src="img/proximamente/black.jpg" class="w-100 rounded-3" alt="estreno 3" />
+                      </a>
+                    </aside>
+                    <a href="pages/blackAdam.html" class="text-center mt-4">
+                      <button class="btn btnColorPrincipal">
+                        <i class="bi bi-info-circle fs-5"></i>
+                        Mas Informacion
+                      </button>
+                    </a>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev justify-content-start botonSlider" type="button"
+            data-bs-target="#carouselEstrenosControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">anterior</span>
+          </button>
+          <button class="carousel-control-next justify-content-end botonSlider" type="button"
+            data-bs-target="#carouselEstrenosControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">siguiente</span>
+          </button>
+        </div>
+      </article>
+    </section>
+    <!------------------------------------------------ SECCIÓN PELÍCULAS GRATIS-----------------------  -->
+    <section class="py-4">
+      <div class="text-center py-4">
+        <h5 class="display-6 text-white text-center textCursivo fontCabin">
+          Películas gratis <b>EXCLUSIVAS</b>, sin necesidad de una
+          suscripción.
+        </h5>
+      </div>
+      <div class="p-3 p-md-4 p-lg-5">
+        <div class="p-3 p-md-4 p-lg-5">
+          <div id="sliderStreamingSM" class="carousel slide episodiosSM" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/running.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-warning text-black">
+                      ¡NUEVO!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/nobody.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-warning text-black">
+                      ¡NUEVO!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/monkeys.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/madmax.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/horizon.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/highlander.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/trumanshow.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-danger">
+                      ¡ÚLTIMA SEMANA!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/godzilla.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/cyborg.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/children.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-danger text-white">
+                      ¡ULTIMA SEMANA!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/sunshine.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-12">
+                    <img src="img/cards/tremors.jpg" class="d-inline col-12 img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#sliderStreamingSM"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#sliderStreamingSM"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div id="sliderStreamingMD" class="carousel slide carousel episodiosMD" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="card text-white col-6">
+                    <img src="img/cards/running.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-warning text-black">
+                      ¡NUEVO!</span>
+                  </div>
+                  <div class="card text-white col-6">
+                    <img src="img/cards/nobody.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-warning text-black">
+                      ¡NUEVO!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-6">
+                    <img src="img/cards/monkeys.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                  <div class="card text-white col-6">
+                    <img src="img/cards/madmax.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-6">
+                    <img src="img/cards/horizon.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                  <div class="card text-white col-6">
+                    <img src="img/cards/highlander.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-6">
+                    <img src="img/cards/trumanshow.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-danger">
+                      ¡ÚLTIMA SEMANA!</span>
+                  </div>
+                  <div class="card text-white col-6">
+                    <img src="img/cards/godzilla.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-6">
+                    <img src="img/cards/cyborg.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                  <div class="card text-white col-6">
+                    <img src="img/cards/children.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-danger text-white">
+                      ¡ULTIMA SEMANA!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-6">
+                    <img src="img/cards/sunshine.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                  <div class="card text-white col-6">
+                    <img src="img/cards/tremors.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#sliderStreamingMD"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#sliderStreamingMD"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div id="sliderStreamingLG" class="carousel slide episodiosLG" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="card text-white col-3">
+                    <img src="img/cards/running.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-warning text-black">
+                      ¡NUEVO!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/nobody.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-warning text-black">
+                      ¡NUEVO!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/monkeys.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/madmax.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-3">
+                    <img src="img/cards/horizon.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success text-white">
+                      ¡POPULAR!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/highlander.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/trumanshow.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-danger">
+                      ¡ÚLTIMA SEMANA!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/godzilla.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="card text-white col-3">
+                    <img src="img/cards/cyborg.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/children.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-danger text-white">
+                      ¡ULTIMA SEMANA!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/sunshine.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                    <span class="position-absolute top0 start0 badge rounded-pill bg-success">
+                      ¡POPULAR!</span>
+                  </div>
+                  <div class="card text-white col-3">
+                    <img src="img/cards/tremors.jpg" class="d-inline img-fluid" alt="Película Gratis" />
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#sliderStreamingLG"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#sliderStreamingLG"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------ SECCIÓN EXPERIENCIA SENCILLA---------------- -->
+    <section class="py-5">
+      <div class="container-fluid py-5">
+        <div class="text-center">
+          <h5 class="display-4 text-white text-center mb-2 textCursivo fontCabin">
+            Una experiencia sencilla y completa.
+          </h5>
+          <p class="text-white">Disponibilidad varía de acuerdo al plan.</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img src="img/Picard.png" class="w-75" alt="Experiencia" />
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------ SECCIÓN PERSONALIZA EXPERIENCIA-------------  -->
+    <section class="mb-5">
+      <article class="container">
+        <div class="row">
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <h5 class="text-center">
+              Personaliza tu experiencia creando hasta 5 perfiles distintos
+              por cuenta.
+            </h5>
+          </aside>
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <h5 class="text-center">
+              Descarga tus historias preferidas para disfrutar offline donde
+              quieras.
+            </h5>
+          </aside>
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <h5 class="text-center">
+              Crea perfiles para los pequeños con contenido de acuerdo a su
+              edad.
+            </h5>
+          </aside>
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <h5 class="text-center">
+              Agrega tus títulos favoritos para verlos cuando quieras.
+            </h5>
+          </aside>
+        </div>
+      </article>
+    </section>
+    <!------------------------------------------------ SECCIÓN SERIE PRINCIPAL------------------------- -->
+    <section class="py-5">
+      <article class="container">
+        <h5 class="display-2 text-white text-center my-4 textCursivo fontCabin">
+          La serie del mes: <br />
+          Oats Studios
+        </h5>
+        <div id="carouselSeriePrincipal" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/peliculaPrincipal/bannerPrincipalOats.jpg" class="d-block w-100" alt="Oats" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/peliculaPrincipal/bannerOats2.jpg" class="d-block w-100" alt="Oats" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/peliculaPrincipal/oats.jpg" class="d-block w-100" alt="Oats" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSeriePrincipal"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselSeriePrincipal"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <p class="text-white mt-3 fs-5 mx-4">
+          Oats Studios son un conjunto de mini cortometrajes experimentales
+          concebidos por Neill Blomkamp (a quien conoces por District 9 y
+          Chappie) que recrean mundos postapocalípticos y escenarios
+          distópicos aterradores.
+        </p>
+        <div class="mt-4 text-center">
+          <a href="pages/seriePrincipal.html">
+            <button class="btn btnColorPrincipal">
+              <i class="bi bi-info-circle fs-5"></i>
+              Mas Informacion
+            </button>
+          </a>
+        </div>
+      </article>
+    </section>
+    <!------------------------------------------------SECCIÓN CONTENIDO EXCLUSIVO-------------------------  -->
+    <section class="py-4 container">
+      <div class="text-center py-4">
+        <div id="carouselContenidoExclusivoControls" class="carousel slide carousel-fade p-4" data-bs-ride="carousel">
+          <h3 class="display-5 text-white text-center mt-3 mb-3 textCursivo fontCabin">
+            EXPLORA NUESTRO CONTENIDO EXCLUSIVO
+          </h3>
+          <div class="carousel-inner p-4">
+            <div class="carousel-item active">
+              <div class="text-center">
+                <h2 class="text-white">
+                  STARCRAFT CARTOONED - La serie
+                </h2>
+              </div>
+              <a href="pages/categoriaExclusivo.html">
+                <div class="row">
+                  <img src="img/exclusivo/Starcraft.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="starcraft" />
+                  <img src="img/exclusivo/terran.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="terran" />
+                  <img src="img/exclusivo/zerg.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="zerg" />
+                </div>
+                <div class="row">
+                  <img src="img/exclusivo/protoss.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="protoss" />
+                  <img src="img/exclusivo/broodwar.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="broodwar" />
+                  <img src="img/exclusivo/thefinale.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="finale" />
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <div class="text-center">
+                <h2 class="text-white">
+                  READING SCIENCE FICTION - Documentales
+                </h2>
+              </div>
+              <a href="pages/categoriaExclusivo.html">
+                <div class="row">
+                  <img src="img/exclusivo/arthurcclarke.jpg"
+                    class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2" alt="clarke" />
+                  <img src="img/exclusivo/asimov.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="asimov" />
+                  <img src="img/exclusivo/dick.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="pdick" />
+                </div>
+                <div class="row">
+                  <img src="img/exclusivo/julio-verne.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="verne" />
+                  <img src="img/exclusivo/raybradbury.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="bradbury" />
+                  <img src="img/exclusivo/Ursula.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="leguin" />
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <div class="text-center">
+                <h2 class="text-white ">MECHAS - Sólo robots</h2>
+              </div>
+              <a href="pages/categoriaExclusivo.html">
+                <div class="row">
+                  <img src="img/exclusivo/astroboy.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="astroboy" />
+                  <img src="img/exclusivo/baronrojo.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="baronrojo" />
+                  <img src="img/exclusivo/Gundam.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="gundam" />
+                </div>
+                <div class="row">
+                  <img src="img/exclusivo/matzinger.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="matzinger" />
+                  <img src="img/exclusivo/robotech.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="robotech" />
+                  <img src="img/exclusivo/Voltron.jpg" class="d-block w-10 rounded col-md-4 col-lg-4 rounded-5 mb-2"
+                    alt="voltron" />
+                </div>
+              </a>
+            </div>
+            <button class="carousel-control-prev d-flex align-items-start justify-content-end" type="button"
+              data-bs-target="#carouselContenidoExclusivoControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-flex align-items-start justify-content-start" type="button"
+              data-bs-target="#carouselContenidoExclusivoControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------------------------------------------SECCIÓN DISPONIBILIDAD DE DISPOSITIVOS-------------  -->
+    <section class="py-3">
+      <article class="container">
+        <div class="text-center text-white">
+          <h5 class="display-6 fontCabin">
+            Disponible en tus dispositivos favoritos
+          </h5>
+          <p>Disponibilidad varía de acuerdo al plan.</p>
+        </div>
+        <div class="row">
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <img src="img/tv.png" alt="" class="w-50" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <p class="text-center">
+              Samsung, LG, Roku, Android, TV Apple, TV Chromecast
+            </p>
+          </aside>
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <img src="img/laptop.png" alt="" class="w-50" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <p class="text-center">Chrome, OS, MacOS, Windows, PC</p>
+          </aside>
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <img src="img/control.png" alt="" class="w-50" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <p class="text-center">PS5, PS4, Xbox One, Xbox Series, XIS</p>
+          </aside>
+          <aside class="col-sm-12 col-md-6 col-lg-3 text-white">
+            <div class="d-flex justify-content-center">
+              <img src="img/cel-tablet.png" alt="" class="w-50" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-dash-lg fs-1"></i>
+            </div>
+            <ul class="text-center">
+              <li>Android Phone & Tablet</li>
+              <li>iPhone & iPad</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </section>
+  </main>
+  <!------------------------------------------------ FOOTER ------------------------------------------  -->
+  <footer class="bg-color py-5 text-center">
+    <section class="m-ms container">
+      <article class="row">
+        <div class="col-12 col-md-3 col-lg-2">
+          <a href="index.html">
+            <img class="logoFooter" src="img/logo/logo-ae04ff.png" alt="logo" width="67" height="67" />
+          </a>
+        </div>
+        <div class="sm-app2 col-12 col-md-3 col-lg-2">
+          <a href="pages/contacto.html" class="linkFooter fs-5">Contáctanos</a>
+        </div>
+        <div class="sm-app col-12 col-md-4 col-lg-2">
+          <a href="pages/acercaDeNosotros.html" class="linkFooter fs-5">Acerca de nosotros</a>
+        </div>
+        <div class="col-md-7 col-12 mt-md col-lg-3">
+          <div class="d-flex flex-column">
+            <h5 class="text-center text-white fs-5 mb-3">Nuestra App</h5>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6 linkFooterApp">
+                <a href="pages/error404.html">
+                  <img src="img/badge-apple-store.svg" alt="iphone" width="150px" />
+                </a>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 sm-app linkFooterApp">
+                <a href="pages/error404.html">
+                  <img src="img/google-play-badge-bb.svg" alt="Play store" width="150px" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mt-md col-lg-2">
+          <div class="text-center sm-app">
+            <h5 class="text-white fs-5">Seguinos</h5>
+            <a href="pages/error404.html"><i class="bi bi-facebook fs-4 ms-3 linkFooter"></i></a>
+            <a href="pages/error404.html"><i class="bi bi-instagram fs-4 ms-3 linkFooter"></i></a>
+            <a href="pages/error404.html"><i class="bi bi-twitter fs-4 ms-3 linkFooter"></i></a>
+          </div>
+        </div>
+    </section>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fb30d5e621.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
