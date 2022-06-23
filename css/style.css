@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Roboto&display=swap");
+
+/* ----------------------------------------HEADER----------------------------------------- */
+.logoNavbar:hover {
+  filter: brightness(150%);
+  transition: all 1s ease;
+}
+
+.btnColorPrincipal {
+  background-color: #ae04ff;
+  color: white;
+}
+
+.btnColorPrincipal:hover {
+  background-color: #7d3087;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------------------------ESTILOS GENERALES EN SECCIONES-------------------- */
+
+.fontCabin {
+  font-family: "Cabin", sans-serif;
+}
+
+.fontRoboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.botonSlider {
+  width: 5%;
+}
+
+.badgeSerie {
+  background-color: #7d3087;
+}
+
+.textBannerPublicidad {
+  color: #ae04ff;
+}
+
+.textCursivo {
+  font-style: oblique;
+}
+
+.bgHBO {
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+}
+
+.bgGradiente {
+  background: rgb(87, 66, 220);
+  background: radial-gradient(
+    circle,
+    rgba(87, 66, 220, 1) 0%,
+    rgba(0, 0, 0, 1) 77%
+  );
+}
+
+.seccionExclusivas {
+  background-color: #9628d5;
+}
+
+.ofertaLetraChica {
+  font-size: xx-small;
+}
+
+.carousel-control-prev-icon {
+  background-color: #ae04ff;
+  border-radius: 90%;
+}
+
+.carousel-control-next-icon {
+  background-color: #ae04ff;
+  border-radius: 90%;
+}
+
+.carousel-control-prev-icon:hover {
+  background-color: rgb(87, 66, 220);
+}
+
+.carousel-control-next-icon:hover {
+  background-color: rgb(87, 66, 220);
+}
+
+/* ----------------------------------------ESTILOS DEL FOOTER-------------------------- */
+
+.logoFooter:hover {
+  filter: brightness(150%);
+  transition: all 1s ease;
+}
+.linkFooter{
+  color: white;
+}
+.linkFooter:hover {
+  color: #7d3087;
+  
+}
+
+.linkFooterApp:hover{
+  filter: brightness(150%);
+  transition: all 1s ease;
+}
+
+.bg-color {
+  background-color: #000000;
+}
+
+/* ----------------------------------------PÁGINA ACERCA DE NOSOTROS-------------------- */
+/*  ACERCA DE NOSOTROS */
+
+.mainNosotros {
+  font-family: "Roboto", sans-serif;
+}
+
+.encabezado {
+  background-color: black;
+  color: white;
+  font-family: "Cabin", sans-serif;
+}
+
+.requisitoInfo {
+  background-color: #54165c;
+}
+
+.requisitoFrase {
+  background-color: #4d6fda;
+  color: black;
+  opacity: 25%;
+}
+
+.requisitoFrase:hover {
+  opacity: 100%;
+}
+
+#frase {
+  color: black;
+  opacity: 100%;
+}
+
+/*  ACERCA DE NOSOTROS */
+#contactoTitle {
+  background-color: #4d6fda;
+  color: whitesmoke;
+}
+
+
+/* ------------------------------------------PÁGINA SUSCRIPCIÓN---------------------------- */
+.modalPlan {
+  background-color: #ae04ff;
+}
+
+.bgplan {
+  background-color: #ae04ff;
+}
+
+.btnSuscripcion {
+  background-color: #ffffff;
+}
+
+.btnSuscripcion:hover {
+  background-color: #7d3087;
+}
+
+.borderRadius {
+  border-radius: 20px;
+  border: 2px solid #ae04ff;
+}
+
+.borderRadius:hover {
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+}
+
+.borderPrecio {
+  border-radius: 6px;
+  background-color: #5742dc;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------------------------MEDIA QUERIES---------------------------------------- */
+
+@media all and (max-width: 575.98px) {
+  .videoBannerAnimado {
+    width: auto;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .episodiosMD {
+    display: none;
+  }
+
+  .episodiosLG {
+    display: none;
+  }
+
+  .sm-app {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .sm-app2 {
+    margin-top: 10px;
+  }
+
+  .sm-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+.imgError404{
+  width: auto;
+  height: 500px;
+  object-fit: cover;
+}
+.imgSeriePrincipal{
+  width: auto;
+  height: 575px;
+  object-fit: cover;
+  }
+
+}
+
+@media all and (min-width: 575.99px) and (max-width: 767.9px) {
+  .videoBannerAnimado {
+    width: auto;
+    height: 550px;
+    object-fit: cover;
+  }
+
+  .episodiosSM {
+    display: none;
+  }
+
+  .episodiosLG {
+    display: none;
+  }
+
+  .imgOats {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .sm-app {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .sm-app2 {
+    margin-top: 10px;
+  }
+
+  .sm-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgError404{
+    width: auto;
+    height: 600px;
+    object-fit: cover;
+  }
+  
+  .imgSeriePrincipal{
+    width: auto;
+    height: 767px;
+    object-fit: cover;
+    }
+
+}
+
+@media all and (min-width: 768px) and (max-width: 992.9px) {
+  .videoBannerAnimado {
+    width: auto;
+    height: 720px;
+    object-fit: cover;
+  }
+
+  .episodiosSM {
+    display: none;
+  }
+
+  .episodiosLG {
+    display: none;
+  }
+
+  .md-flex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sm-app {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+
+  .imgError404{
+    width: auto;
+    height: 720px;
+    object-fit: cover;
+  }
+  .imgSeriePrincipal{
+    width: auto;
+    height: 992px;
+    object-fit: cover;
+    }
+
+}
+
+@media all and (min-width: 993px) {
+  .videobannerAnimado {
+    width: auto;
+    height: 720px;
+    object-fit: cover;
+  }
+
+  .episodiosSM {
+    display: none;
+  }
+
+  .episodiosMD {
+    display: none;
+  }
+
+  .cardVideoBannerAnimado {
+    font-size: xx-large;
+  }
+}
+
